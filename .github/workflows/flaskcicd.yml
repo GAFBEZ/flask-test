@@ -1,6 +1,6 @@
 name: Flask python CICD
 
-on: [push, pull] 
+on: [push, pull_request]
 
 jobs:
   test:
@@ -34,4 +34,4 @@ jobs:
             git pull origin main
             pip install -r requirements.txt
             sudo systemctl restart gunicorn
-            echo "Done"
+          
